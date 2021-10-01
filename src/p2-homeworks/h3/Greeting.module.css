@@ -1,0 +1,40 @@
+.button{
+    color: white;
+    font-weight: 600;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #1878ED;
+}
+.greeting {
+    display: flex;
+    gap: 5px;
+}
+
+.input:focus{
+    outline: none;
+}
+.input{
+    padding: 4px 8px;
+    background-color: #EFEFEF;
+    border: 1px solid #F3F3F4;
+    border-radius: 4px;
+    transition: 0.2s ease;
+}
+.input:hover{
+    border: 1px solid #D1D1D1;
+}
+.input:focus{
+    border: 1px solid #1878ED;
+}
+.error {
+    border: 1px solid #ED1729;
+    background-color: rgba(237, 23, 41, 0.2);
+}
+.error:hover {
+    border: 1px solid #ED1729;
+}
+.error:focus{
+    border: 1px solid #ED1729;
+}
