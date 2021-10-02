@@ -13,10 +13,10 @@ function App() {
                 <h1>React homeworks</h1>
             </div>
             <div className={s.content}>
-                <HW1/>
-                <HW2/>
-                <HW3/>
-                <HW4/>
+                {/*<HW1/>*/}
+                {/*<HW2/>*/}
+                {/*<HW3/>*/}
+                {/*<HW4/>*/}
 
                 <HW5/>
             </div>

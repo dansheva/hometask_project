@@ -1,0 +1,12 @@
+.content > div:nth-child(2n){
+    background-color: #f8f8f8;
+}
+.content > div:last-child{
+    background-color: #f8f8f8;
+    border-bottom: none;
+}
+
+.content > div{
+    padding: 20px;
+    border-bottom: #d1d1d1 solid 1px;
+}
