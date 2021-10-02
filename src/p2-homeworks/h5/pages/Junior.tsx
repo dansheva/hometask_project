@@ -6,6 +6,7 @@ export const Junior = () => {
     return (
         <div>
             <div className={s.content}>
+                //only functionality
                 <HW7/>
             </div>
         </div>
