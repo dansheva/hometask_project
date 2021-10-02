@@ -43,7 +43,7 @@ const SuperInputText: React.FC<SuperInputTextPropsType> = (
 
     return (
         <>
-            <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+            <div>
                 <input
                     type={'text'}
                     onChange={onChangeCallback}
