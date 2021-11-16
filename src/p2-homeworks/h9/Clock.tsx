@@ -7,43 +7,46 @@ function Clock() {
     const [show, setShow] = useState<boolean>(false)
 
     const stop = () => {
-        // stop
+        clearInterval(timerId)
     }
+
     const start = () => {
         stop()
         const id: number = window.setInterval(() => {
-            // setDate
+            setDate(new Date())
         }, 1000)
         setTimerId(id)
     }
 
     const onMouseEnter = () => {
-        // show
+        setShow(true)
     }
     const onMouseLeave = () => {
-        // close
+        setShow(false)
     }
 
-    const stringTime = 'Time' // fix with date
-    const stringDate = 'Date' // fix with date
+    const stringTime = date? `${date.getHours()}: ${date.getMinutes()}: ${date.getSeconds()}`: '' // fix with date
+    const stringDate = date? `${date.getDay()}.${date.getMonth()}.${date.getFullYear()}`: '' // fix with date
 
     return (
         <div>
-            <div
-                onMouseEnter={onMouseEnter}
-                onMouseLeave={onMouseLeave}
-            >
-                {stringTime}
+            <div style={{height: '50px', display: 'flex', flexDirection: 'column', justifyContent: 'flex-start'}}>
+                <div style={{cursor: 'pointer'}}
+                    onMouseEnter={onMouseEnter}
+                    onMouseLeave={onMouseLeave}
+                >
+                    {stringTime}
+                </div>
+
+                {show && (
+                    <div>
+                        {stringDate}
+                    </div>
+                )}
             </div>
 
-            {show && (
-                <div>
-                    {stringDate}
-                </div>
-            )}
-
-            <SuperButton onClick={start}>start</SuperButton>
-            <SuperButton onClick={stop}>stop</SuperButton>
+            <SuperButton onClick={start} style={{marginRight: '5px'}}>Start</SuperButton>
+            <SuperButton onClick={stop}>Stop</SuperButton>
 
         </div>
     )
