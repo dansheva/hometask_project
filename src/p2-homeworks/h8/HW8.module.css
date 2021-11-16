@@ -1,0 +1,37 @@
+.affairs_container {
+    display: flex;
+    flex-direction: column;
+}
+
+.container{
+    display: flex;
+}
+
+.affairs {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.affairs_container > div{
+    padding: 6px 0;
+    border-bottom: #d1d1d1 solid 1px;
+}
+
+.affairs_container > div:last-child{
+    border-bottom: none;
+}
+
+.buttons{
+    padding: 10px 0 0 0;
+    display: flex;
+    gap: 6px;
+}
+
+
+.affair {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
